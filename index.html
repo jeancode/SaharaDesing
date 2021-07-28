@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sahara Desert</title>
+	<style>
+		body{
+			margin: 0px;
+			font-family: sans-serif;
+		}
+		#background{
+		
+			position: fixed;
+			width: 100%;
+			height: 100%;	
+			z-index: -2;
+			background-image: url(images/background.jpeg);
+			background-size: cover;
+			background-position: center;
+			
+		}
+		#contenido{
+			
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+		#menu{
+			width: 100%;
+			min-height: 100px;
+		
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding-left: 30px;
+			opacity: 0;
+			animation: fadeIn .5s ease forwards;
+		}
+		.itemMenu{
+			color: white;
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-bottom: 6px;
+			padding-top: 6px;
+			border-radius: 33px;
+			
+			margin-left: 10px;
+			margin-right: 10px;
+			-webkit-user-select:none;
+		}
+		.itemMenu:hover{
+			background: rgba(255, 255, 255, 0.22);
+			-webkit-transition:all .5s ease;
+			
+		}
+		#header{
+			flex: 1;
+			min-width: 100%;
+			height: 400px;
+			display: flex;
+			flex-direction: row;
+		}
+		.headerText{
+			flex: 0.8;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.headerImages{
+			flex: 1;
+	
+			display: flex;
+			flex-direction: row;
+			
+		}
+		.headerImagesLeft{
+
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			
+		}
+		.headerImagesRight{
+			flex: 1;
+	
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.headerTextTitle{
+			color: white;
+			font-size: 90px;
+			text-shadow: 0px 25px 10px rgba(0, 0, 0, 0.46);
+			margin-bottom: 30px;
+			opacity: 0;
+			animation:TopIn .5s ease forwards;
+		}
+		.headerTextMessage{
+			color: white;
+			max-width: 80%;
+			text-align: justify;
+			margin-bottom: 34px;
+			animation:TopIn .7s ease forwards;
+		}
+		.boton{
+			
+			width: 150px;
+			min-height: 35px;
+			border-radius: 33px;
+			border:none;
+			background: rgba(0, 0, 0, 0.39);
+			color: white;
+			animation:TopIn 1s ease forwards;
+		}
+		.headerImagesItems{
+			
+			width: 240px;
+			height: 300px;
+			background: red;
+			margin-bottom: 30px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			position: relative;
+			overflow: hidden;
+			
+		}
+		.a{
+			background-image: url(images/a.jpeg);
+			animation:TopIn .5s ease forwards;
+		}
+		.b{
+			background-image: url(images/b.jpeg);
+			animation:bottIn .5s ease forwards;
+		}
+		.c{
+			background-image: url(images/c.jpeg);
+			animation:TopIn .5s ease forwards;
+		}
+		.d{
+			background-image: url(images/d.jpeg);
+				animation:bottIn .5s ease forwards;
+		}
+		
+		
+		.headerImagesItemsDescription{
+			
+			bottom: 0px;
+			bottom: 0px;
+			position: absolute;
+			width: 100%;
+			min-height: 80px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			-webkit-user-select:none;
+			background: linear-gradient(0deg,black,transparent);
+			
+		}
+		.headerImagesItemsDescriptionName{
+			color: white;
+			padding-left: 20px;
+		}
+		.headerImagesItemsDescriptionText{
+			color: white;
+			padding-left: 20px;
+			font-size: 15px;
+			margin-top: 10px;
+			
+		}
+		
+		/*animaciones ke frame */
+		
+		@keyframes fadeIn{
+			from{
+				opacity: 0;
+				
+			}
+			to
+			{
+				opacity: 1;
+			}
+			
+		}
+		@keyframes TopIn{
+			
+			from{
+				opacity: 0;
+				transform: translateY(-100%);
+				
+			}
+			to
+			{
+				opacity: 1;
+				transform: translateY(0%);
+			}
+		}
+		@keyframes bottIn{
+			
+			from{
+				opacity: 0;
+				transform: translateY(100%);
+				
+			}
+			to
+			{
+				opacity: 1;
+				transform: translateY(0%);
+			}
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="background"></div>
+
+	<div id="contenido">
+		
+		<div id="menu">
+			
+			<div class="itemMenu">Home</div>
+			<div class="itemMenu">Region</div>
+			<div class="itemMenu">Nosotros</div>
+		</div>
+		
+		<div id="header">
+			
+			<div class="headerText">
+				
+				
+				<div class="headerTextTitle">
+					
+					Sahara
+				</div>
+				
+				<div class="headerTextMessage">
+					
+					Esto es un mensaje de prueba y lo puedes cambiar cuando quieras
+					
+				</div>
+				
+				<div class="headerTextControl">
+					
+					<input class="boton" type="submit" value="Explore">
+					
+				</div>
+			</div>
+			
+			<div class="headerImages">
+				
+				<div class="headerImagesLeft">
+					
+					<div class="headerImagesItems a">
+						
+						
+						<div class="headerImagesItemsDescription">
+							
+							<div class="headerImagesItemsDescriptionName">
+								Name
+							</div>
+							<div class="headerImagesItemsDescriptionText">
+								Esta es una descripcion
+							</div>						
+						</div>
+						
+						
+					</div>
+					<div class="headerImagesItems b">
+							<div class="headerImagesItemsDescription">
+							
+							<div class="headerImagesItemsDescriptionName">
+								Name
+							</div>
+							<div class="headerImagesItemsDescriptionText">
+								Esta es una descripcion
+							</div>						
+						</div>
+					</div>
+					
+				</div>
+				
+				<div class="headerImagesRight">
+					
+					<div class="headerImagesItems c">
+						<div class="headerImagesItemsDescription">
+							
+							<div class="headerImagesItemsDescriptionName">
+								Name
+							</div>
+							<div class="headerImagesItemsDescriptionText">
+								Esta es una descripcion
+							</div>						
+						</div>
+					</div>
+					<div class="headerImagesItems d">
+						<div class="headerImagesItemsDescription">
+							
+							<div class="headerImagesItemsDescriptionName">
+								Name
+							</div>
+							<div class="headerImagesItemsDescriptionText">
+								Esta es una descripcion
+							</div>						
+						</div>
+						
+					</div>	
+					
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
